@@ -1,0 +1,46 @@
+<div style="padding: 50px ;background-color: aliceblue;  background-image: url(https://www.bing.com/th?id=OIP.IAVeDmbTHE6SK_MutnBnkAHaEo&w=316&h=197&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2);
+border-color: brown;
+border-width: 2px;
+border-style: outset;
+margin-top: 100px;
+margin-left:400px ;
+margin-bottom: 200px;
+margin-right: 400px;">
+
+<h2 style="text-align: center;
+margin-top: -20px; font-family: cursive;">LOGIN</h2>
+    <label style="  font-family: cursive;  margin-left: 135px;">Name:</label>
+    <input style="  font-family: cursive;  margin-left: 27px;" type="text" [(ngModel)]="name" placeholder="Enter your name" required/>
+    <span style="color: red;">{{name}}</span>
+<br>
+<br>
+<label style="  font-family: cursive;  margin-left: 135px; ">Password:</label>
+<input style="  font-family: cursive;  margin-left: 5px;" type="password" [(ngModel)]="password" placeholder="Enter your password" required/>
+<br>
+<br>
+<button style=" font-family: cursive;  margin-left: 217px; background-color:rgb(179, 224, 89); border-radius:7px;" (click)="Add(statusDiv)">ADD</button>
+
+
+<div #statusDiv>
+    {{status}}
+</div>
+</div>
+<div>
+<h3 style="margin-top: -168px; font-family: cursive;">New Users:</h3>
+
+<table style=" box-shadow: -1px 2px 2px 2px; border: 2px solid rgb(27, 23, 23); font-family: cursive;">
+<th>
+   <tr>
+       <td>Name</td>
+       
+   </tr>
+   
+   <tr *ngFor="let person of pplArray">
+    <td>{{person.name}}</td>
+    
+   </tr>
+</th>
+</table>
+</div>
+
+
